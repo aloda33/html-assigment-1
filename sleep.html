@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function redirectToPage(page) {
+      window.location.href = page;
+      }
+
+      function goBack() {
+          window.history.back();
+      }
+      
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var sleepData = [];
+    var sleepTable = document.getElementById('sleepTable');
+    var averageSleepCell = document.getElementById('averageSleep');
+
+    window.logSleep = function() {
+        var sleepDateInput = document.getElementById('sleepDate');
+        var sleepHoursInput = document.getElementById('sleepHours');
+
+        var sleepDate = sleepDateInput.value;
+        var sleepHours = parseInt(sleepHoursInput.value);
+
+        if (!isNaN(sleepHours)) {
+            // Format date to show day of the week
+            var dateObj = new Date(sleepDate);
+            var dayOfWeek = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(dateObj);
+
+            // Add data to the array
+            sleepData.push({ date: sleepDate, day: dayOfWeek, hours: sleepHours });
+
+            // Update the table
+            updateSleepTable();
+
+            // Calculate and update the average
+            calculateAverage();
+
+            // Clear the inputs
+            sleepDateInput.value = '';
+            sleepHoursInput.value = '';
+        }
+    };
+
+    function updateSleepTable() {
+        var tbody = sleepTable.querySelector('tbody');
+
+        // Clear existing rows
+        tbody.innerHTML = '';
+
+        // Add new rows
+        sleepData.forEach(function(entry) {
+            var row = tbody.insertRow();
+            var cellDate = row.insertCell(0);
+            var cellDay = row.insertCell(1);
+            var cellHours = row.insertCell(2);
+
+            cellDate.textContent = entry.date;
+            cellDay.textContent = entry.day;
+            cellHours.textContent = entry.hours;
+        });
+    }
+
+    function calculateAverage() {
+        var totalHours = 0;
+
+        sleepData.forEach(function(entry) {
+            totalHours += entry.hours;
+        });
+
+        var average = totalHours / sleepData.length;
+
+        // Update the average cell
+        averageSleepCell.textContent = average.toFixed(2);
+    }
+});
+
+    </script>
+    <title>Self-Care Tips - Prioritize Sleep</title>
+
+</head>
+<body>
+    <div class="description-container">
+        <h1 class="description-title">Prioritize Sleep</h1>
+        <img src="images/sleep.jpg" alt="Sleep" class="description-image">
+        <p class="description-text">
+            Ensure you get enough quality sleep. Aim for 7-9 hours of sleep each night.
+            Create a relaxing bedtime routine to improve the quality of your sleep.
+        </p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+    
+    <table class="sleep-table" id="sleepTable">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Hours Slept</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Average Sleep Hours:</td>
+            <td id="averageSleep">0</td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="log-form">
+    <label for="sleepDate">Date:</label>
+    <input type="date" id="sleepDate" required>
+    <label for="sleepHours">Hours Slept:</label>
+    <select id="sleepHours" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <button onclick="logSleep()">Log Sleep</button>
+</div>
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>

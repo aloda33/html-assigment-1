@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function redirectToPage(page) {
+    window.location.href = page;
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+    </script>
+    <script>
+    function expandCard(cardNumber) {
+    var card = document.querySelector('.card:nth-child(' + cardNumber + ')');
+    var hiddenText = card.querySelector('.hidden-text');
+
+    card.classList.add('expanded-card');
+    hiddenText.style.display = 'block';
+}
+
+function shrinkCard(cardNumber) {
+    var card = document.querySelector('.card:nth-child(' + cardNumber + ')');
+    var hiddenText = card.querySelector('.hidden-text');
+
+    card.classList.remove('expanded-card');
+    hiddenText.style.display = 'none';
+}
+
+    </script>
+   
+
+</head>
+<body>
+    <div class="description-container">
+        <h1 class="description-title">Practice Mindfulness/ Meditation</h1>
+        <img src="images/sleep.jpg" alt="Sleep" class="description-image">
+        <p class="description-text">
+        Incorporate mindfulness and meditation into your daily routine. Take a few minutes each day to focus on your breath, clear your mind, and be present in the moment
+        </p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+    <div class="card-container">
+    <div class="card" onmouseover="expandCard(1)" onmouseout="shrinkCard(1)">
+        <h2 class="card-title">Stress Reduction</h2>
+        <p class="hidden-text">Mindfulness meditation helps reduce stress and promotes a sense of calm by focusing on the present moment.</p>
+    </div>
+    <div class="card" onmouseover="expandCard(2)" onmouseout="shrinkCard(2)">
+        <h2 class="card-title">Improved Focus</h2>
+        <p class="hidden-text">Regular meditation practice enhances concentration and cognitive abilities, leading to improved focus and attention.</p>
+    </div>
+    <div class="card" onmouseover="expandCard(3)" onmouseout="shrinkCard(3)">
+        <h2 class="card-title">Emotional Well-being</h2>
+        <p class="hidden-text">Mindfulness meditation fosters emotional well-being by increasing self-awareness and reducing negative emotions.</p>
+    </div>
+    <div class="card" onmouseover="expandCard(4)" onmouseout="shrinkCard(4)">
+        <h2 class="card-title">Better Sleep</h2>
+        <p class="hidden-text">Practicing mindfulness meditation before bedtime can contribute to better sleep by calming the mind and promoting relaxation.</p>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

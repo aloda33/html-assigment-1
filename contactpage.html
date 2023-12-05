@@ -14,6 +14,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+    function redirectToPage(page) {
+    window.location.href = page;
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+</script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -27,47 +37,58 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/aboutpage.html">About page</a>
+              <a class="nav-link" href="/aboutpage.html">Calendar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/contactpage.html" aria-current="page">Contact page/RSVP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/roi.html">ROI Calculator</a>
+              <a class="nav-link active" href="/contactpage.html" aria-current="page">Self-care tips</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <h1 style="color: rgb(211,91,111)">RSVP</h1>
-      <h3 style="color: rgb(211,91,111)"> Here are the ways to RSVP!</h3>
-      <p> Please send: "YES/NO Alba's Birthday Party" and number of people attending.</p>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">How</th>
-            <th scope="col">Where</th>
-            <th scope="col">To whom</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Text/Call</th>
-            <td>620-719-8667</td>
-            <td>Alba Lozano</td>
-          </tr>
-          <tr>
-            <th scope="row">Email</th>
-            <td>lozanodavilaalba@gmail.com</td>
-            <td>Alba Lozano</td>
-          </tr>
-        </tbody>
-      </table>
-      
-    
+      <div class="card-container" id="card-container">
+        <div class="card" onclick="redirectToPage('sleep.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Prioritize Sleep</h2>
+        </div>
+        </br>
+        <div class="card" onclick="redirectToPage('mind.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Mindfulness/Meditation</h2>
+        </div>
+        </br>
+        <div class="card" onclick="redirectToPage('exercise.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Regular Exercise</h2>
+        </div>
+        </br>
+        <div class="card" onclick="redirectToPage('nutrition.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Healthy Nutrition</h2>
+        </div>
+        </br>
+        <div class="card" onclick="redirectToPage('activities.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Engage in Activities</h2>
+        </div>
+        </br>
+        <div class="card" onclick="redirectToPage('boundaries.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Set Boundaries</h2>
+        </div>
+        </br>
+        <div class="card" onclick="redirectToPage('connect.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Connect with Others</h2>
+        </div>
+        </br>
+        <div class="card" onclick="redirectToPage('detox.html')">
+            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class="card-title">Digital Detox</h2>
+        </div>
+      </div>
     </main>
-    <footer> <br>*For more questions, feel free to contact Alba in any of the ways listed above! </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function redirectToPage(page) {
+    window.location.href = page;
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+</script>
+    
+
+</head>
+<body>
+    <div class="description-container">
+        <h1 class="description-title">Regular Exercise</h1>
+        <img src="images/sleep.jpg" alt="Sleep" class="description-image">
+        <p class="description-text">
+        Engage in regular physical activity. Whether it's a brisk walk, a workout at the gym, or yoga, exercise is essential for both physical and mental well-being
+        </p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
