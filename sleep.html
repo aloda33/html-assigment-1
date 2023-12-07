@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script>
       function redirectToPage(page) {
       window.location.href = page;
@@ -86,58 +87,60 @@
 
 </head>
 <body>
-    <div class="description-container">
-        <h1 class="description-title">Prioritize Sleep</h1>
-        <img src="images/sleep.jpg" alt="Sleep" class="description-image">
-        <p class="description-text">
-            Ensure you get enough quality sleep. Aim for 7-9 hours of sleep each night.
-            Create a relaxing bedtime routine to improve the quality of your sleep.
-        </p>
-        <button onclick="goBack()">Go Back</button>
-    </div>
-    
-    <table class="sleep-table" id="sleepTable">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Day</th>
-            <th>Hours Slept</th>
-        </tr>
-    </thead>
-    <tbody>
+    <div class="container text-center">
+        <img src="http://www.safecare.com/wp-content/blogs.dir/13/files/2017/12/Sleep.jpg" alt="Sleep" style="width:400px;"></br>
+        <button class="mt-2 btn btn-outline-secondary" onclick="goBack()">Go Back</button>
+            <h1 class="mt-2">Prioritize Sleep</h1>
+            
+            <p class="description-text">
+                Ensure you get enough quality sleep. Aim for 7-9 hours of sleep each night.
+                Create a relaxing bedtime routine to improve the quality of your sleep.</br> Keep track of your sleep:
+            </p>
+            
         
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="2">Average Sleep Hours:</td>
-            <td id="averageSleep">0</td>
-        </tr>
-    </tfoot>
-</table>
+        
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Hours Slept</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Average Sleep Hours:</td>
+                <td id="averageSleep">0</td>
+            </tr>
+        </tfoot>
+    </table>
 
-<div class="log-form">
-    <label for="sleepDate">Date:</label>
-    <input type="date" id="sleepDate" required>
-    <label for="sleepHours">Hours Slept:</label>
-    <select id="sleepHours" required>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-    </select>
-    <button onclick="logSleep()">Log Sleep</button>
+    <div class="log-form">
+        <label for="sleepDate">Date:</label>
+        <input type="date" id="sleepDate" required></br>
+        <label class="mt-2"for="sleepHours">Hours Slept:</label>
+        <select id="sleepHours" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select></br>
+        <button class="btn btn-outline-primary mt-2 mb-4"onclick="logSleep()">Log Sleep</button>
+    </div>
 </div>
-
    
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
