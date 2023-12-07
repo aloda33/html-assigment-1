@@ -28,65 +28,47 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand">
+        <img src="https://clipart.info/images/ccovers/1518056311Pink-Heart-PNG-Pic.png" width="30" height="24" class="d-inline-block align-text-top">
+          Care4U
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/aboutpage.html">Calendar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/contactpage.html" aria-current="page">Self-care tips</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link"  href="/">Home</a>
+            <a class="nav-link "  href="/aboutpage.html">Calendar</a>
+            <a class="nav-link active" aria-current="page" href="/contactpage.html">Self-care tips</a>
+          </div>
         </div>
       </div>
     </nav>
     <main>
+      <div class="container">
+        <h1> Self-care tips</h1>
+      </div>
       <div class="card-container" id="card-container">
         <div class="card" onclick="redirectToPage('sleep.html')">
-            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Prioritize Sleep</h2>
+            <img src="http://www.safecare.com/wp-content/blogs.dir/13/files/2017/12/Sleep.jpg" alt="Sleep" class="card-image">
+            <h2 class=" mt-2 card-title">Prioritize Sleep</h2>
         </div>
         </br>
         <div class="card" onclick="redirectToPage('mind.html')">
             <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Mindfulness/Meditation</h2>
+            <h2 class=" mt-2 card-title">Mindfulness/Meditation</h2>
         </div>
         </br>
         <div class="card" onclick="redirectToPage('exercise.html')">
             <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Regular Exercise</h2>
+            <h2 class="mt-2 card-title">Regular Exercise</h2>
         </div>
         </br>
         <div class="card" onclick="redirectToPage('nutrition.html')">
             <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Healthy Nutrition</h2>
+            <h2 class="mt-2 card-title">Healthy Nutrition</h2>
         </div>
-        </br>
-        <div class="card" onclick="redirectToPage('activities.html')">
-            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Engage in Activities</h2>
-        </div>
-        </br>
-        <div class="card" onclick="redirectToPage('boundaries.html')">
-            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Set Boundaries</h2>
-        </div>
-        </br>
-        <div class="card" onclick="redirectToPage('connect.html')">
-            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Connect with Others</h2>
-        </div>
-        </br>
-        <div class="card" onclick="redirectToPage('detox.html')">
-            <img src="images/sleep.jpg" alt="Sleep" class="card-image">
-            <h2 class="card-title">Digital Detox</h2>
-        </div>
+        
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
